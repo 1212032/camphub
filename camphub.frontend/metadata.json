@@ -1,0 +1,5 @@
+{
+  "name": "CampHub",
+  "description": "A backoffice dashboard for managing a holiday summer camp. It provides at-a-glance summaries of registrations, payments, and daily activity schedules.",
+  "requestFramePermissions": []
+}
