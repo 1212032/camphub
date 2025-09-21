@@ -3,6 +3,8 @@ import React from 'react';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Dashboard from './components/Dashboard';
+import ChatPage from './pages/ChatPage';
+
 
 const App: React.FC = () => {
   return (
@@ -14,6 +16,7 @@ const App: React.FC = () => {
           <Dashboard />
         </main>
       </div>
+      <ChatPage />
     </div>
   );
 };

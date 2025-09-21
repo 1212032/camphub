@@ -21,3 +21,14 @@ export interface Activity {
   location: string;
   instructor: string;
 }
+
+export enum Author {
+  USER = 'user',
+  BOT = 'bot',
+}
+
+export interface ChatMessage {
+  id: string;
+  text: string;
+  author: Author;
+}
