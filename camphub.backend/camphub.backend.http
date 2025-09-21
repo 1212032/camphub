@@ -1,0 +1,6 @@
+@camphub.backend_HostAddress = http://localhost:5260
+
+GET {{camphub.backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
