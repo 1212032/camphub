@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ChartData {
@@ -10,16 +9,21 @@ interface RegistrationChartProps {
     data: ChartData[];
 }
 
-const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } = (window as any).Recharts;
-
 const RegistrationChart: React.FC<RegistrationChartProps> = ({ data }) => {
-    if (!BarChart) {
+    // Check if Recharts is available on window object
+    const Recharts = (window as any).Recharts;
+    
+    if (!Recharts) {
         return (
             <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md h-full flex items-center justify-center">
                 <p className="text-gray-500">Chart library is loading...</p>
             </div>
         );
     }
+
+    // Destructure after confirming Recharts exists
+    const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } = Recharts;
+
     return (
         <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md h-96">
             <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Weekly Registrations</h3>
